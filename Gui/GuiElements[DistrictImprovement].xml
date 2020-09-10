@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <GuiElement Name="DistrictImprovementArchitects1">
+    <Title>%DistrictImprovementArchitects1Title</Title>
+    <Description>%DistrictImprovementArchitects1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/City/BoosterGeneratorIndustryBonus1Small" />
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/City/BoosterGeneratorIndustryBonus1Large" />
+    </Icons>
+  </GuiElement>
+
+
+  <ExtendedGuiElement Name="DistrictImprovement1Availability">
+    <TooltipElement Ignore="true">
+      <EffectOverride>%DistrictImprovement1AvailabilityTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  
+  <!-- Free district -->
+<GuiElement Name="FreeDistrictImprovementArchitects1">
+    <Title>%DistrictImprovementArchitects1Title</Title>
+    <Description>%DistrictImprovementArchitects1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/City/FreeDistrictImprovement1Small" />
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/City/FreeDistrictImprovement1Large" />
+    </Icons>
+  </GuiElement>
+
+  
+<!--Necrophage trait Architect Districts -->
+  
+  <GuiElement Name="DistrictImprovementArchitects1Necrophage">
+    <Title>%DistrictImprovementArchitects1Title</Title>
+    <Description>%DistrictImprovementArchitects1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/City/BoosterGeneratorIndustryBonus1Small" />
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/City/BoosterGeneratorIndustryBonus1Large" />
+    </Icons>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="DistrictImprovementArchitects1NecrophageAvailability">
+    <TooltipElement  Ignore="true">
+      <EffectOverride>%DistrictImprovementArchitects1NecrophageAvailabilityTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+  
+  <ExtendedGuiElement Name="FactoryRequirement">
+    <TooltipElement>
+      <EffectOverride>%ArchitectsFactoryRequirement</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+  
+<!-- Unit Factories -->
+<!--Vitruvian-->
+  <GuiElement Name="DistrictImprovementArchitectsVitruvian1">
+    <Title>%DistrictImprovementArchitectsVitruvian1Title</Title>
+    <Description>%DistrictImprovementArchitectsVitruvian1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/Region/ResourceExtractor_Strategic5Small" />
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/Region/ResourceExtractor_Strategic5Large" />
+    </Icons>
+  </GuiElement>
+  
+    <GuiElement Name="DistrictImprovementArchitectsVitruvian1Necrophage">
+    <Title>%DistrictImprovementArchitectsVitruvian1Title</Title>
+    <Description>%DistrictImprovementArchitectsVitruvian1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/Region/ResourceExtractor_Strategic5Small" />
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/Region/ResourceExtractor_Strategic5Large" />
+    </Icons>
+  </GuiElement>
+  
+<!--Golem Soldiers-->
+  <GuiElement Name="DistrictImprovementArchitectsSoldiers1">
+    <Title>%DistrictImprovementArchitectsSoldiers1Title</Title>
+    <Description>%DistrictImprovementArchitectsSoldiers1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/Region/ResourceExtractor_Strategic3Small" />
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/Region/ResourceExtractor_Strategic3Large" />
+    </Icons>
+  </GuiElement>
+  
+    <GuiElement Name="DistrictImprovementArchitectsSoldiers1Necrophage">
+    <Title>%DistrictImprovementArchitectsSoldiers1Title</Title>
+    <Description>%DistrictImprovementArchitectsSoldiers1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/Region/ResourceExtractor_Strategic3Small" />
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/Region/ResourceExtractor_Strategic3Large" />
+    </Icons>
+  </GuiElement>
+  
+<!--Collectors-->
+  <GuiElement Name="DistrictImprovementArchitectsCollectors1">
+    <Title>%DistrictImprovementArchitectsCollectors1Title</Title>
+    <Description>%DistrictImprovementArchitectsCollectors1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/City/CityImprovementDust4Small" /> 
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/City/CityImprovementDust4Large" />
+    </Icons>
+  </GuiElement>
+  
+    <GuiElement Name="DistrictImprovementArchitectsCollectors1Necrophage">
+    <Title>%DistrictImprovementArchitectsCollectors1Title</Title>
+    <Description>%DistrictImprovementArchitectsCollectors1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/City/CityImprovementDust4Small" /> 
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/City/CityImprovementDust4Large" />
+    </Icons>
+  </GuiElement>
+
+  <!--Artillery-->
+  <GuiElement Name="DistrictImprovementArchitectsArtillery1">
+    <Title>%DistrictImprovementArchitectsArtillery1Title</Title>
+    <Description>%DistrictImprovementArchitectsArtillery1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/Region/ResourceExtractor_Strategic6Small" />
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/Region/ResourceExtractor_Strategic6Large" />
+    </Icons>
+  </GuiElement>
+  
+    <GuiElement Name="DistrictImprovementArchitectsArtillery1Necrophage">
+    <Title>%DistrictImprovementArchitectsArtillery1Title</Title>
+    <Description>%DistrictImprovementArchitectsArtillery1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/Region/ResourceExtractor_Strategic6Small" />
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/Region/ResourceExtractor_Strategic6Large" />
+    </Icons>
+  </GuiElement>
+
+</Datatable>

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Militia -->
+
+  <UnitBodyDefinition Name="UnitBodyGolemFactoryMilitia"           SubCategory="SubCategoryInfantry">
+
+    <Tags>Hidden</Tags>
+
+    <UnitAbilityReference Name="UnitAbilityFast" Level="0"/>
+    <UnitAbilityReference Name="UnitAbilityDiseaseImmunity"/>
+
+    <PathPrerequisite Flags="Prerequisite">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+    <UnitDesignPrerequisites>
+      <PathPrerequisite Flags="Prerequisite,Validity">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+      <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,SlotPrerequisite">($Property(ClassCity,Garrison:MaximumUnitSlotCount) - $Property(ClassCity,Garrison:UnitSlotCount)) ge 1</InterpreterPrerequisite>
+    </UnitDesignPrerequisites>
+
+    <CustomCost ResourceName="Production" Instant="false">$Property(../ClassEmpire:UnitProductionCostMoreExpensive) + $Property(../ClassEmpire:UnitProductionCostMoreExpensive)  * $Property(../ClassEmpire:CostIncreaseFromEra)</CustomCost>
+
+    <SimulationDescriptorReference Name="AffinityGolemFactory" />
+    <SimulationDescriptorReference Name="UnitTypeArchitectsMilitia" />
+    <SimulationDescriptorReference Name="UnitClassInfantry" />
+    <SimulationDescriptorReference Name="UnitSizeMedium" />
+    <SimulationDescriptorReference Name="MovementCapacityWalk" />
+    <SimulationDescriptorReference Name="ItemSlotSpear2" />
+    <SimulationDescriptorReference Name="ItemSlotHead" />
+    <SimulationDescriptorReference Name="ItemSlotTorso" />
+    <SimulationDescriptorReference Name="ItemSlotLegs" />
+    <SimulationDescriptorReference Name="ItemSlotAccessory" />
+
+    <UnitEquipmentSet>
+      <Slot Name="MainHand"                        ItemName="ItemSpear2IronTier1#1" />
+      <Slot Name="OffHand"                         ItemName="ItemSpear2IronTier1#1" />
+      <Slot Name="Head"                            ItemName="" />
+      <Slot Name="Torso"                           ItemName="" />
+      <Slot Name="Legs"                            ItemName="" />
+      <Slot Name="Accessory0" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory1" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory2" SlotType="Accessory" ItemName="" />
+    </UnitEquipmentSet>
+
+    <UnitBodyStance Name="#Default">
+      <Attachment Scale="0.51">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="MainHand" />
+      </Attachment>
+    </UnitBodyStance>
+
+    <UnitBodyBattleParameters>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityHighGroundBonus"/>
+      <BattleActionUnitReference Name="BattleActionUnitMeleeDefaultAttack"/>
+      <BattleActionUnitReference Name="BattleActionUnitMeleeDefaultDefense"/>
+      <BattleActionUnitReference Name="BattleActionUnitCheckConfidence"/>
+      <BattleActionUnitReference Name="BattleActionUnitRetreat"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackResult"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackVisualSetting"/>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityMinorSlayer"/>
+      <!-- for the AI -->
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOffense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOffenseBlocker"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeDefense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeHoldPosition"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOpportunity"/>
+    </UnitBodyBattleParameters>
+
+  </UnitBodyDefinition>
+
+<!-- Tier 1 Engineers -->
+
+<UnitBodyDefinition Name="UnitBodyEngineers" SubCategory="SubCategoryInfantry">
+
+    <Tags/>
+   
+    <CostReductionReference Name="MajorTypeUnit"/>
+   
+	<UnitAbilityReference Name="UnitAbilityHeal"/>
+    <UnitAbilityReference Name="UnitAbilityUnleashedPotential"/>	
+
+    <PathPrerequisite Flags="Prerequisite">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+    <UnitDesignPrerequisites>
+      <PathPrerequisite Flags="Prerequisite,Validity">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+      <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,SlotPrerequisite">($Property(ClassCity,Garrison:MaximumUnitSlotCount) - $Property(ClassCity,Garrison:UnitSlotCount)) ge 1</InterpreterPrerequisite>
+    </UnitDesignPrerequisites>
+
+    <CustomCost ResourceName="Production" Instant="false">$Property(../ClassEmpire:UnitProductionCostMoreThanAverage) + $Property(../ClassEmpire:UnitProductionCostMoreThanAverage)  * $Property(../ClassEmpire:CostIncreaseFromEra)</CustomCost>
+
+    <SimulationDescriptorReference Name="AffinityGolemFactory"/>
+    <SimulationDescriptorReference Name="UnitTypeEngineers"/>
+    <SimulationDescriptorReference Name="UnitClassInfantry"/>
+    <SimulationDescriptorReference Name="UnitSizeMedium"/>
+    <SimulationDescriptorReference Name="MovementCapacityWalk" />
+    <SimulationDescriptorReference Name="ItemSlotAxe1" />
+    <SimulationDescriptorReference Name="ItemSlotShield1" />
+    <SimulationDescriptorReference Name="ItemSlotAxe2" />
+    <SimulationDescriptorReference Name="ItemSlotHead" />
+    <SimulationDescriptorReference Name="ItemSlotTorso" />
+    <SimulationDescriptorReference Name="ItemSlotLegs" />
+    <SimulationDescriptorReference Name="ItemSlotAccessory" />
+
+    <UnitEquipmentSet>
+      <Slot Name="MainHand"                        ItemName="ItemAxe1IronTier1#1"    />
+      <Slot Name="OffHand"                         ItemName="ItemShield1IronTier1#2" />
+      <Slot Name="Head"                            ItemName="" />
+      <Slot Name="Torso"                           ItemName="" />
+      <Slot Name="Legs"                            ItemName="" />
+      <Slot Name="Accessory0" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory1" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory2" SlotType="Accessory" ItemName="" />
+    </UnitEquipmentSet>
+
+    <UnitBodyStance Name="#Default">
+      <Attachment Scale="0.4">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="MainHand" />
+      </Attachment>
+    </UnitBodyStance>
+
+    <UnitBodyStance Name="#OffHandShield">
+      <SimulationPathPrerequisite Path="ClassUnit/OffHand,ItemClassShield1" />
+      <Attachment Scale="0.4">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="MainHand" />
+      </Attachment>
+      <Attachment Scale="0.4">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="OffHand" />
+      </Attachment>
+    </UnitBodyStance>
+
+    <UnitBodyBattleParameters>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityHighGroundBonus"/>
+      <BattleActionUnitReference Name="BattleActionUnitVaultersDawnOfficerCharging"/>
+      <BattleActionUnitReference Name="BattleActionUnitMeleeDefaultAttack"/>
+      <BattleActionUnitReference Name="BattleActionUnitMeleeDefaultDefense"/>
+      <BattleActionUnitReference Name="BattleActionUnitCheckConfidence"/>
+      <BattleActionUnitReference Name="BattleActionUnitRetreat"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackResult"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackVisualSetting"/>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityMinorSlayer"/>
+      <!-- for the AI -->
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorCavalryOffense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorCavalryOffenseBlocker"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorCavalryDefense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorCavalryOpportunity"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorCavalryHoldPosition"/>    
+	</UnitBodyBattleParameters>
+
+  </UnitBodyDefinition>
+  
+  <!-- Tier 1/2 Units. Use this to create technology req. Don't forget GUI element 
+  
+      <PathPrerequisite Flags="Prerequisite">.../EmpireTypeMajor,AffinityReplicants</PathPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyReplicantsUnit2</TechnologyPrerequisite>
+    <UnitDesignPrerequisites>
+      <PathPrerequisite Flags="Prerequisite,Validity">.../EmpireTypeMajor,AffinityReplicants</PathPrerequisite>
+      <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,SlotPrerequisite">($Property(ClassCity,Garrison:MaximumUnitSlotCount) - $Property(ClassCity,Garrison:UnitSlotCount)) ge 1</InterpreterPrerequisite>
+    </UnitDesignPrerequisites>
+	
+	-->
+  
+  <!-- Mass produced soldier golems (Era 1) -->
+  
+    <UnitBodyDefinition Name="UnitBodyGolemSoldiers" SubCategory="SubCategoryInfantry">
+
+    <Tags/>
+
+    <CostReductionReference Name="MajorTypeUnit"/>
+
+	
+    <UnitAbilityReference Name="UnitAbilityInstantHeal" Parameters="EmpireMoney"/>
+    <UnitAbilityReference Name="UnitAbilityCannotRegen"/>
+    <UnitAbilityReference Name="UnitAbilityCanRegenWithVillage"/>
+    <UnitAbilityReference Name="UnitAbilityDiseaseImmunity"/>
+    <!--<UnitAbilityReference Name=""/>-->
+    <UnitAbilityReference Name="UnitAbilitySlow" Level="0"/>
+  
+    <PathPrerequisite Flags="Prerequisite">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyGolemFactoryUnit1</TechnologyPrerequisite>
+    <UnitDesignPrerequisites>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Validty">$Count(ClassCity/DistrictImprovementArchitectsSoldiers) ge 1</InterpreterPrerequisite>
+      <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology,Validity">TechnologyGolemFactoryUnit1</TechnologyPrerequisite>
+      <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,SlotPrerequisite">($Property(ClassCity,Garrison:MaximumUnitSlotCount) - $Property(ClassCity,Garrison:UnitSlotCount)) ge 1</InterpreterPrerequisite>
+	  </UnitDesignPrerequisites>
+
+    <CustomCost ResourceName="Production" Instant="false">$Property(../ClassEmpire:UnitProductionCostLessThanAverage) + $Property(../ClassEmpire:UnitProductionCostMostExpensive) * $Property(../ClassEmpire:CostIncreaseFromEra)</CustomCost>
+
+    <SimulationDescriptorReference Name="AffinityGolemFactory"/>
+    <SimulationDescriptorReference Name="UnitTypeGolemSoldier"/>
+    <SimulationDescriptorReference Name="UnitClassInfantry" />
+    <SimulationDescriptorReference Name="UnitSizeSmall" />
+    <SimulationDescriptorReference Name="MovementCapacityWalk" />
+    <SimulationDescriptorReference Name="ItemSlotSword2" />
+    <SimulationDescriptorReference Name="ItemSlotSpear2" />
+    <SimulationDescriptorReference Name="ItemSlotHammer2" />
+    <SimulationDescriptorReference Name="ItemSlotHead" />
+    <SimulationDescriptorReference Name="ItemSlotTorso" />
+    <SimulationDescriptorReference Name="ItemSlotLegs" />
+    <SimulationDescriptorReference Name="ItemSlotAccessory" />
+
+    <UnitEquipmentSet>
+      <Slot Name="MainHand"                        ItemName="ItemSpear2IronTier1#1" />
+      <Slot Name="OffHand"                         ItemName="ItemSpear2IronTier1#1" />
+      <Slot Name="Head"                            ItemName="" />
+      <Slot Name="Torso"                           ItemName="" />
+      <Slot Name="Legs"                            ItemName="" />
+      <Slot Name="Accessory0" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory1" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory2" SlotType="Accessory" ItemName="" />
+    </UnitEquipmentSet>
+
+    <UnitBodyStance Name="#Default">
+      <Attachment Scale="0.51">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="MainHand" />
+      </Attachment>
+    </UnitBodyStance>
+	
+    <UnitBodyStance Name="#OffHandShield">
+      <SimulationPathPrerequisite Path="ClassUnit/OffHand,ItemClassShield1" />
+      <Attachment Scale="0.51">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="MainHand" />
+      </Attachment>
+      <Attachment Scale="0.51">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="OffHand" />
+      </Attachment>
+    </UnitBodyStance>
+	
+	
+    <UnitBodyBattleParameters>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityHighGroundBonus"/>
+      <BattleActionUnitReference Name="BattleActionUnitMeleeDefaultAttack"/>
+      <BattleActionUnitReference Name="BattleActionUnitMeleeDefaultDefense"/>
+      <BattleActionUnitReference Name="BattleActionUnitCheckConfidence"/>
+      <BattleActionUnitReference Name="BattleActionUnitRetreat"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackResult"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackVisualSetting"/>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityMinorSlayer"/>
+      <!-- for the AI -->
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOffense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOffenseBlocker"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeDefense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeHoldPosition"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOpportunity"/>
+    </UnitBodyBattleParameters>
+
+  </UnitBodyDefinition>
+
+  
+  <!-- Vitruvian (Era 1) -->
+  
+  <UnitBodyDefinition Name="UnitBodyVitruvian" SubCategory="SubCategoryInfantry">
+
+    <Tags/>
+
+    <CostReductionReference Name="MajorTypeUnit"/>
+
+	
+    <UnitAbilityReference Name="UnitAbilityInstantHeal" Parameters="EmpireMoney"/>
+    <UnitAbilityReference Name="UnitAbilityCannotRegen"/>
+    <UnitAbilityReference Name="UnitAbilityCanRegenWithVillage"/>
+    <UnitAbilityReference Name="UnitAbilityDiseaseImmunity"/>
+    <UnitAbilityReference Name="UnitAbilityBeam"/>
+    <UnitAbilityReference Name="UnitAbilityTurtle"/>
+    <UnitAbilityReference Name="UnitAbilitySlow" Level="0"/>
+  
+    <PathPrerequisite Flags="Prerequisite">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyGolemFactoryUnit2</TechnologyPrerequisite>
+    <UnitDesignPrerequisites>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Validty">$Count(ClassCity/DistrictImprovementArchitectsVitruvian) ge 1</InterpreterPrerequisite>	
+      <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology,Validity">TechnologyGolemFactoryUnit2</TechnologyPrerequisite>
+      <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,SlotPrerequisite">($Property(ClassCity,Garrison:MaximumUnitSlotCount) - $Property(ClassCity,Garrison:UnitSlotCount)) ge 1</InterpreterPrerequisite>
+	  </UnitDesignPrerequisites>
+
+    <CustomCost ResourceName="Production" Instant="false">$Property(../ClassEmpire:UnitProductionCostMostExpensive) + $Property(../ClassEmpire:UnitProductionCostMostExpensive) * $Property(../ClassEmpire:CostIncreaseFromEra)</CustomCost>
+	
+	<Cost ResourceName="Production" Instant="false">230</Cost>
+
+	
+    <SimulationDescriptorReference Name="AffinityGolemFactory"/>
+    <!--<SimulationDescriptorReference Name="UnitBodyMezariTitan"/>-->
+    <SimulationDescriptorReference Name="UnitTypeVitruvian"/>
+    <SimulationDescriptorReference Name="UnitClassInfantry" />
+    <SimulationDescriptorReference Name="UnitSizeLarge" />
+    <SimulationDescriptorReference Name="MovementCapacityWalk" />
+    <SimulationDescriptorReference Name="ItemSlotSword1" />
+    <SimulationDescriptorReference Name="ItemSlotShield1" />
+    <SimulationDescriptorReference Name="ItemSlotClaw2" />
+    <SimulationDescriptorReference Name="ItemSlotHead" />
+    <SimulationDescriptorReference Name="ItemSlotTorso" />
+    <SimulationDescriptorReference Name="ItemSlotLegs" />
+    <SimulationDescriptorReference Name="ItemSlotAccessory" />
+
+    <UnitEquipmentSet>
+      <Slot Name="MainHand"                        ItemName="ItemSword1IronTier1#1" />
+      <Slot Name="OffHand"                         ItemName="ItemShield1IronTier1#2" />
+      <Slot Name="Head"                            ItemName="" />
+      <Slot Name="Torso"                           ItemName="" />
+      <Slot Name="Legs"                            ItemName="" />
+      <Slot Name="Accessory0" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory1" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory2" SlotType="Accessory" ItemName="" />
+    </UnitEquipmentSet>
+
+    <UnitBodyStance Name="#Default">
+      <Attachment Scale="0.65">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="MainHand" />
+      </Attachment>
+    </UnitBodyStance>
+
+    <UnitBodyStance Name="#OffHandShield">
+      <SimulationPathPrerequisite Path="ClassUnit/OffHand,ItemClassShield1" />
+      <Attachment Scale="0.65">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="MainHand" />
+      </Attachment>
+      <Attachment Scale="0.65">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="OffHand" />
+      </Attachment>
+    </UnitBodyStance>
+
+    <UnitBodyBattleParameters>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityHighGroundBonus"/>
+      <BattleActionUnitReference Name="BattleActionUnitMeleeDefaultAttack"/>
+      <BattleActionUnitReference Name="BattleActionUnitMeleeDefaultDefense"/>
+      <BattleActionUnitReference Name="BattleActionUnitCheckConfidence"/>
+      <BattleActionUnitReference Name="BattleActionUnitRetreat"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackResult"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackVisualSetting"/>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityMinorSlayer"/>
+      <!-- for the AI -->
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOffense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOffenseBlocker"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeDefense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOpportunity"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeHoldPosition"/>
+    </UnitBodyBattleParameters>
+
+  </UnitBodyDefinition>
+
+    <!-- Tier 3 (Era 2) unit -->
+  
+    <UnitBodyDefinition Name="UnitBodyGolemArtillery"             SubCategory="SubCategoryRanged">
+	
+    <CostReductionReference Name="MajorTypeUnit"/>
+
+    <UnitAbilityReference Name="UnitAbilityDiseaseImmunity"/>
+    <UnitAbilityReference Name="UnitAbilitySlow" Level="0"/>
+    <UnitAbilityReference Name="UnitAbilityHighRanged" />
+    <UnitAbilityReference Name="UnitAbilityArtillery" />
+ 
+	<UnitAbilityReference Name="UnitAbilityInstantHeal" Parameters="EmpireMoney"/>
+    <UnitAbilityReference Name="UnitAbilityCannotRegen"/>
+    <UnitAbilityReference Name="UnitAbilityCanRegenWithVillage"/>
+
+	
+    <PathPrerequisite Flags="Prerequisite">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyGolemFactoryUnit3</TechnologyPrerequisite>
+    <UnitDesignPrerequisites>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Validty">$Count(ClassCity/DistrictImprovementArchitectsArtillery) ge 1</InterpreterPrerequisite>	
+      <PathPrerequisite Flags="Prerequisite,Validity">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+      <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology,Validity">TechnologyGolemFactoryUnit3</TechnologyPrerequisite>
+      <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,SlotPrerequisite">($Property(ClassCity,Garrison:MaximumUnitSlotCount) - $Property(ClassCity,Garrison:UnitSlotCount)) ge 1</InterpreterPrerequisite>
+    </UnitDesignPrerequisites>
+
+
+   <Tags></Tags>
+
+    <CustomCost ResourceName="Production" Instant="false">($Property(../ClassEmpire:UnitProductionCostMostExpensive) + $Property(../ClassEmpire:UnitProductionCostMostExpensive) * $Property(../ClassEmpire:CostIncreaseFromEra))</CustomCost>
+
+    <SimulationDescriptorReference Name="AffinityGolemFactory" />
+    <SimulationDescriptorReference Name="UnitTypeArtilleryGolem"/>
+    <SimulationDescriptorReference Name="UnitClassRanged"/>
+    <SimulationDescriptorReference Name="UnitSizeLarge"/>
+    <SimulationDescriptorReference Name="MovementCapacityWalk" />
+    <SimulationDescriptorReference Name="ItemSlotWand2" />
+    <SimulationDescriptorReference Name="ItemSlotScepter2" />
+    <SimulationDescriptorReference Name="ItemSlotHead" />
+    <SimulationDescriptorReference Name="ItemSlotTorso" />
+    <SimulationDescriptorReference Name="ItemSlotLegs" />
+    <SimulationDescriptorReference Name="ItemSlotAccessory" />
+
+    <UnitEquipmentSet>
+      <Slot Name="MainHand"                        ItemName="ItemScepter2IronTier1#1" />
+      <Slot Name="OffHand"                         ItemName="ItemScepter2IronTier1#1" />
+      <Slot Name="Head"                            ItemName="" />
+      <Slot Name="Torso"                           ItemName="" />
+      <Slot Name="Legs"                            ItemName="" />
+      <Slot Name="Accessory0" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory1" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory2" SlotType="Accessory" ItemName="" />
+    </UnitEquipmentSet>
+
+    <UnitBodyStance Name="#Default">
+      <Attachment Scale="0.5">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="MainHand" />
+      </Attachment>
+    </UnitBodyStance>
+
+    <UnitBodyBattleParameters>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityHighGroundBonus"/>
+      <BattleActionUnitReference Name="BattleActionUnitRangeDefaultAttack"/>
+      <BattleActionUnitReference Name="BattleActionUnitRangeDefaultDefense"/>
+      <BattleActionUnitReference Name="BattleActionUnitBrokenLordsBlackBishopAttackDefense"/>
+      <BattleActionUnitReference Name="BattleActionUnitBrokenLordsBlackBishopAttackLeech"/>
+      <BattleActionUnitReference Name="BattleActionUnitCheckSharpSense"/>
+      <BattleActionUnitReference Name="BattleActionUnitRetreat"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackResult"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackVisualSetting"/>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityMinorSlayer"/>
+      <!-- for the AI -->
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorSupportOffense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorSupportDefense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorSupportOpportunity"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorSupportHoldPosition"/>
+
+    </UnitBodyBattleParameters>
+	
+  </UnitBodyDefinition>
+  
+  <!-- Era 2 Tier 4 Collector -->
+  
+    <UnitBodyDefinition Name="UnitBodyGolemCollector"           SubCategory="SubCategorySupport">
+
+    <Tags>Solitary</Tags>
+
+    <CostReductionReference Name="MajorTypeUnit"/>	
+	
+    <UnitAbilityReference Name="UnitAbilitySolitary"/>
+    <UnitAbilityReference Name="UnitAbilityDiseaseImmunity"/>	
+    <UnitAbilityReference Name="UnitAbilitySlow" Level="0"/>
+	<UnitAbilityReference Name="UnitAbilityInstantHeal" Parameters="EmpireMoney"/>
+    <UnitAbilityReference Name="UnitAbilityCannotRegen"/>
+    <UnitAbilityReference Name="UnitAbilityCanRegenWithVillage"/>
+    <UnitAbilityReference Name="UnitAbilityStealth" />	
+    <UnitAbilityReference Name="UnitAbilityHarbinger"/>
+
+
+    <PathPrerequisite Flags="Prerequisite">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyGolemFactoryUnit4</TechnologyPrerequisite>	
+    <UnitDesignPrerequisites>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Validty">$Count(ClassCity/DistrictImprovementArchitectsCollectors) ge 1</InterpreterPrerequisite>	
+      <PathPrerequisite Flags="Prerequisite,Validity">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+      <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology,Validity">TechnologyGolemFactoryUnit4</TechnologyPrerequisite>	  
+      <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,SlotPrerequisite">($Property(ClassCity,Garrison:MaximumUnitSlotCount) - $Property(ClassCity,Garrison:UnitSlotCount)) ge 1</InterpreterPrerequisite>
+    </UnitDesignPrerequisites>
+
+    <CustomCost ResourceName="Production" Instant="false">$Property(../ClassEmpire:UnitProductionCostMostExpensive) + $Property(../ClassEmpire:UnitProductionCostMostExpensive)  * $Property(../ClassEmpire:CostIncreaseFromEra)</CustomCost>
+    <Cost ResourceName="Strategic1" Instant="true">5</Cost>
+    <Cost ResourceName="Strategic2" Instant="true">5</Cost>
+
+	
+    <SimulationDescriptorReference Name="AffinityGolemFactory" />
+    <SimulationDescriptorReference Name="UnitTypeCollector"/>
+    <SimulationDescriptorReference Name="UnitClassSupport" />
+	<SimulationDescriptorReference Name="UnitTypeSolitary" />
+    <SimulationDescriptorReference Name="UnitSizeMedium" />
+    <SimulationDescriptorReference Name="MovementCapacityWalk" />
+    <SimulationDescriptorReference Name="ItemSlotSpear2" />
+    <SimulationDescriptorReference Name="ItemSlotHead" />
+    <SimulationDescriptorReference Name="ItemSlotTorso" />
+    <SimulationDescriptorReference Name="ItemSlotLegs" />
+    <SimulationDescriptorReference Name="ItemSlotAccessory" />
+
+    <UnitEquipmentSet>
+      <Slot Name="MainHand"                        ItemName="" />
+      <Slot Name="OffHand"                         ItemName="" />
+      <Slot Name="Head"                            ItemName="" />
+      <Slot Name="Torso"                           ItemName="" />
+      <Slot Name="Legs"                            ItemName="" />
+      <Slot Name="Accessory0" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory1" SlotType="Accessory" ItemName="" />
+      <Slot Name="Accessory2" SlotType="Accessory" ItemName="" />
+    </UnitEquipmentSet>
+
+    <UnitBodyStance Name="#Default">
+      <Attachment Scale="0.51">
+        <Mapping Name="Item.Generic" />
+        <Slot Name="MainHand" />
+      </Attachment>
+    </UnitBodyStance>
+
+    <UnitBodyBattleParameters>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityHighGroundBonus"/>
+      <BattleActionUnitReference Name="BattleActionUnitMeleeDefaultAttack"/>
+      <BattleActionUnitReference Name="BattleActionUnitMeleeDefaultDefense"/>
+      <BattleActionUnitReference Name="BattleActionUnitCheckConfidence"/>
+      <BattleActionUnitReference Name="BattleActionUnitRetreat"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackResult"/>
+      <BattleActionUnitReference Name="BattleActionUnitAttackVisualSetting"/>
+      <BattleActionUnitReference Name="BattleActionUnitAbilityMinorSlayer"/>
+    
+
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOffense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOffenseBlocker"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeDefense"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeHoldPosition"/>
+      <BattleTargetingUnitBehaviorWeightsReferences Name="UnitBehaviorMeleeOpportunity"/>
+    </UnitBodyBattleParameters>
+
+  </UnitBodyDefinition>
+  
+</Datatable>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  
+  <!-- New GolemFactory Tech -->
+
+  
+    <TechnologyDefinition  Name="TechnologyDefinitionGolemFactoryUnit1"               TechnologyFlags="Affinity">
+    <SimulationDescriptorReference Name="TechnologyGolemFactoryUnit1"/>
+    <SimulationDescriptorReference Name="TechnologyCountIncreaseEra1"/>
+    <PathPrerequisite Flags="Prerequisite,TechnologyEra">EmpireTypeMajor/ClassResearch,TechnologyEra1</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable">EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+    <CustomCost ResourceName="EmpireResearch">$Property(EmpireTypeMajor/ClassResearch:TechnologyCost) * $Property(EmpireTypeMajor/ClassResearch:Era1CostMultiplier)</CustomCost>
+  </TechnologyDefinition>
+  
+  
+    <TechnologyDefinition  Name="TechnologyDefinitionGolemFactoryUnit2"               TechnologyFlags="Affinity">
+    <SimulationDescriptorReference Name="TechnologyGolemFactoryUnit2"/>
+    <SimulationDescriptorReference Name="TechnologyCountIncreaseEra1"/>
+    <PathPrerequisite Flags="Prerequisite,TechnologyEra">EmpireTypeMajor/ClassResearch,TechnologyEra1</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable">EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+    <CustomCost ResourceName="EmpireResearch">$Property(EmpireTypeMajor/ClassResearch:TechnologyCost) * $Property(EmpireTypeMajor/ClassResearch:Era1CostMultiplier)</CustomCost>
+  </TechnologyDefinition>
+  
+    <TechnologyDefinition  Name="TechnologyDefinitionGolemFactoryUnit4"               TechnologyFlags="Affinity">
+    <SimulationDescriptorReference Name="TechnologyGolemFactoryUnit4"/>
+    <SimulationDescriptorReference Name="TechnologyCountIncreaseEra1"/>
+    <PathPrerequisite Flags="Prerequisite,TechnologyEra">EmpireTypeMajor/ClassResearch,TechnologyEra1</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable">EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+    <CustomCost ResourceName="EmpireResearch">$Property(EmpireTypeMajor/ClassResearch:TechnologyCost) * $Property(EmpireTypeMajor/ClassResearch:Era1CostMultiplier)</CustomCost>
+  </TechnologyDefinition>  
+
+    <TechnologyDefinition  Name="TechnologyDefinitionGolemFactoryFactories1"               TechnologyFlags="Affinity">
+    <SimulationDescriptorReference Name="TechnologyGolemFactoryEra1Factories"/>
+    <SimulationDescriptorReference Name="TechnologyCountIncreaseEra1"/>
+    <PathPrerequisite Flags="Prerequisite,TechnologyEra">EmpireTypeMajor/ClassResearch,TechnologyEra1</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable">EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+    <CustomCost ResourceName="EmpireResearch">$Property(EmpireTypeMajor/ClassResearch:TechnologyCost) * $Property(EmpireTypeMajor/ClassResearch:Era1CostMultiplier)</CustomCost>
+  </TechnologyDefinition>
+  
+<!--Architect Exclusions -->
+
+  <TechnologyDefinition  Name="TechnologyDefinitionBoosterScience"                                                 Visibility="Hidden">
+    <SimulationDescriptorReference Name="TechnologyBoosterScience" />
+    <CustomCost ResourceName="EmpireResearch">$Property(EmpireTypeMajor/ClassResearch:TechnologyCost)* $Property(EmpireTypeMajor/ClassResearch:Era1CostMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,TechnologyEra">EmpireTypeMajor/ClassResearch,TechnologyEra1</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable" Inverted="true">EmpireTypeMajor,AffinityReplicants,AffinityGolemFactory</PathPrerequisite>
+  </TechnologyDefinition>
+  
+  <TechnologyDefinition  Name="TechnologyDefinitionScience0">
+    <SimulationDescriptorReference Name="TechnologyScience0"/>
+    <SimulationDescriptorReference Name="TechnologyCountIncreaseEra1"/>
+    <CustomCost ResourceName="EmpireResearch">$Property(EmpireTypeMajor/ClassResearch:TechnologyCost) * $Property(EmpireTypeMajor/ClassResearch:Era1CostMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,TechnologyEra">EmpireTypeMajor/ClassResearch,TechnologyEra1</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable" Inverted="true">EmpireTypeMajor,AffinityReplicants,AffinityGolemFactory</PathPrerequisite>
+  </TechnologyDefinition>
+  
+    <TechnologyDefinition  Name="TechnologyDefinitionScience8"                      TechnologyFlags="Unique">
+    <SimulationDescriptorReference Name="TechnologyScience8"/>
+    <SimulationDescriptorReference Name="TechnologyCountIncreaseEra1"/>
+    <CustomCost ResourceName="EmpireResearch">$Property(EmpireTypeMajor/ClassResearch:TechnologyCost) * $Property(EmpireTypeMajor/ClassResearch:Era1CostMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,TechnologyEra">EmpireTypeMajor/ClassResearch,TechnologyEra1</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable" Inverted="true">EmpireTypeMajor,AffinityReplicants,AffinityGolemFactory</PathPrerequisite>
+  </TechnologyDefinition>
+  
+  <TechnologyDefinition  Name="TechnologyDefinitionBoosterFood"                                                    Visibility="Hidden">
+    <SimulationDescriptorReference Name="TechnologyBoosterFood" />
+    <CustomCost ResourceName="EmpireResearch">$Property(EmpireTypeMajor/ClassResearch:TechnologyCost)* $Property(EmpireTypeMajor/ClassResearch:Era1CostMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,TechnologyEra">EmpireTypeMajor/ClassResearch,TechnologyEra1</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable" Inverted="true">EmpireTypeMajor,AffinityBrokenLords,AffinityGolemFactory</PathPrerequisite>
+  </TechnologyDefinition>
+  
+  <TechnologyDefinition  Name="TechnologyDefinitionFood0"                         TechnologyFlags="Unique">
+    <SimulationDescriptorReference Name="TechnologyFood0"/>
+    <SimulationDescriptorReference Name="TechnologyCountIncreaseEra1"/>
+    <CustomCost ResourceName="EmpireResearch">$Property(EmpireTypeMajor/ClassResearch:TechnologyCost) * $Property(EmpireTypeMajor/ClassResearch:Era1CostMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,TechnologyEra">EmpireTypeMajor/ClassResearch,TechnologyEra1</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable" Inverted="true">EmpireTypeMajor,AffinityBrokenLords,AffinityGolemFactory</PathPrerequisite>
+  </TechnologyDefinition>
+  
+
+  
+</Datatable>

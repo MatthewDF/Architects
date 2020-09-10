@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <QuestGuiElement Name="MainQuestArchitects-Chapter1">
+    <Title>%ArchitectsFactoryTutorial1Title</Title>
+    <Description>%ArchitectsFactoryTutorial1Description</Description>
+    <Objective>%ArchitectsFactoryTutorial1Objective</Objective>
+    <Outcome>%ArchitectsFactoryTutorial1Outcome</Outcome>
+    <Icons>
+      <Icon Path="Gui/DynamicBitmaps/Quests/QuestCultists3" Size="Small" />
+    </Icons>
+    <!--<Steps>
+      <Step Name="SideQuestPOI#0001-Step1">%SideQuestPOI#0001-Step1</Step>
+      <Step Name="SideQuestPOI#0001-Step2">%SideQuestPOI#0001-Step2</Step>
+      <Step Name="SideQuestPOI#0001-Step3">%SideQuestPOI#0001-Step3</Step>
+      <Step Name="SideQuestPOI#0001-Step4">%SideQuestPOI#0001-Step4</Step>
+    </Steps>-->
+  </QuestGuiElement>
+  
+</Datatable>

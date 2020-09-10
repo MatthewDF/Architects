@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ########################################## -->
+  <!-- ######         Golem Factory        ###### -->
+  <!-- ########################################## -->
+
+  <!-- Golem Factory -->
+  <GuiElement Name="UnitDesignEngineers#1">
+    <Title>%UnitBodyEngineers</Title>
+    <Description>%UnitBodyEngineersDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="GUI/AtlasedBitmaps/Units/UnitVaultersDawnOfficerSmall" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/Units/UnitVaultersDawnOfficerLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="UnitDesignGolemSoldiers#1">
+  <Title>%UnitBodyGolemSoldiersTitle</Title>
+    <Description>%UnitBodyGolemSoldiersDescription</Description>
+    <Icons DefaultSize="">
+      <Icon Size="Small" Path="GUI/AtlasedBitmaps/Units/UnitBrokenLordsMilitiaSmall" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/Units/UnitBrokenLordsMilitiaLarge" />
+    </Icons>
+  </GuiElement>
+  
+      <GuiElement Name="UnitDesignVitruvian#1">
+    <Title>%UnitBodyVitruvianTitle</Title>
+    <Description>%UnitBodyVitruviaDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="GUI/AtlasedBitmaps/Units/UnitMezariTitanSmall" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/Units/UnitMezariTitanLarge" />
+    </Icons>
+  </GuiElement>
+  
+  <GuiElement Name="UnitDesignGolemArtillery#1">
+    <Title>%UnitGolemArtilleryTitle</Title>
+    <Description>%UnitGolemArtilleryDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="GUI/AtlasedBitmaps/Units/UnitBrokenLordsCavalrySmall" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/Units/UnitBrokenLordsCavalryLarge" />
+    </Icons>
+  </GuiElement>  
+
+  <GuiElement Name="UnitDesignGolemSettler#1">
+    <Title>%UnitGolemSettlerTitle</Title>
+    <Description>%UnitGolemSettlerDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="GUI/AtlasedBitmaps/Units/UnitCultistsSettlerSmall" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/Units/UnitCultistsSettlerLarge" />
+    </Icons>
+  </GuiElement>  
+  
+  <GuiElement Name="UnitDesignGolemCollector#1">
+    <Title>%UnitGolemCollectorTitle</Title>
+    <Description>%UnitGolemCollectorDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="GUI/AtlasedBitmaps/Units/UnitCultistsMilitiaSmall" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/Units/UnitCultistsMilitiaLarge" />
+    </Icons>
+  </GuiElement>  
+  
+  <!-- FACTORY MILITIA -->
+  <GuiElement Name="UnitBodyGolemFactoryMilitia">
+    <Title>%UnitGolemMilitiaTitle</Title>
+    <Description>%UnitGolemMilitiaDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="GUI/AtlasedBitmaps/Units/UnitBrokenLordsMilitiaSmall" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/Units/UnitBrokenLordsMilitiaLarge" />
+    </Icons>
+  </GuiElement>
+  
+  
+</Datatable>
+

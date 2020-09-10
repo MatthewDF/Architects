@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!--RESEARCH-->
+
+	<!-- Architects Override -->
+
+    <!--FOOD-->
+
+    <SimulationNormalizedAgent Name="FoodPopulation">
+
+        <PathPrerequisite Inverted="true">.../ClassEmpire,AffinityBrokenLords,AffinityGolemFactory</PathPrerequisite>
+
+        <ValueInit>
+            <InterpreterValue>$Property(ClassCity:FoodPopulation)</InterpreterValue>
+        </ValueInit>
+
+        <MaximumValue>
+            <InterpreterValue>$Property(ClassCity:Workers)</InterpreterValue>
+        </MaximumValue>
+
+        <!-- In percentage of total city population. -->
+        <ValueMin>0</ValueMin>
+        <ValueMax>1</ValueMax>
+
+        <CurveReference Name="Flat0" />
+
+        <InfluencesReceived>
+        </InfluencesReceived>
+    </SimulationNormalizedAgent>
+
+</Datatable>

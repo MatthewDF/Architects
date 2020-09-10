@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  
+  <!-- New Era 2 GolemFactory Tech -->
+    <TechnologyDefinition  Name="TechnologyDefinitionGolemFactoryUnit3"               TechnologyFlags="Affinity">
+    <SimulationDescriptorReference Name="TechnologyGolemFactoryUnit3"/>
+    <SimulationDescriptorReference Name="TechnologyCountIncreaseEra2"/>
+	<CustomCost ResourceName="EmpireResearch">$Property(EmpireTypeMajor/ClassResearch:TechnologyCost)* $Property(EmpireTypeMajor/ClassResearch:Era2CostMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,TechnologyEra">EmpireTypeMajor/ClassResearch,TechnologyEra2</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable">EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+  </TechnologyDefinition>
+   
+    <TechnologyDefinition  Name="TechnologyDefinitionGolemFactoryFactories2"               TechnologyFlags="Affinity">
+    <SimulationDescriptorReference Name="TechnologyGolemFactoryEra2Factories"/>
+    <SimulationDescriptorReference Name="TechnologyCountIncreaseEra2"/>
+    <PathPrerequisite Flags="Prerequisite,TechnologyEra">EmpireTypeMajor/ClassResearch,TechnologyEra2</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable">EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+    <CustomCost ResourceName="EmpireResearch">$Property(EmpireTypeMajor/ClassResearch:TechnologyCost) * $Property(EmpireTypeMajor/ClassResearch:Era2CostMultiplier)</CustomCost>
+  </TechnologyDefinition>
+
+
+
+
+
+
+  </Datatable>
+
+

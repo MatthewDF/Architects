@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ========================================
+       ======== DROPLIST MOD QUESTS ==========
+       ======================================== -->
+
+  <!-- REWARDS  -->
+	
+  <!--  Reward Test -->
+  <Droplist Name="DroplistArchitects1ProductionReward">
+    <Resource Name="Strategic1"        Quantity="5"   Weight="10"/>
+    <Resource Name="Strategic2"        Quantity="5"   Weight="10"/>  	
+  </Droplist>
+
+  <Droplist Name="DroplistArchitects1TechQuestReward">
+    <Technology Name="TechnologyDefinitionGolemFactoryFactories1" />
+  </Droplist>
+  
+  </Datatable>

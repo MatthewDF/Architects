@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ############################# -->
+  <!-- ########  AT START  ######### -->
+  <!-- ############################# -->
+
+
+  <!-- Architects Era 1 -->
+  <TechnologyGuiElement Name="TechnologyDefinitionGolemFactoryUnit1"                        X="-120"  Y="-240">
+    <Title>%UnitBodyGolemSoldiersTitle</Title>
+    <Description>%UnitBodyGolemSoldiersDescription</Description>
+    <Icons DefaultSize="">
+      <Icon Size="Small" Path="GUI/AtlasedBitmaps/Units/UnitBrokenLordsMilitiaSmall" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/Units/UnitBrokenLordsMilitiaLarge" />
+    </Icons>
+    <TechnologyEraReference Name="TechnologyEraDefinition1" />
+  </TechnologyGuiElement>
+
+  <TechnologyGuiElement Name="TechnologyDefinitionGolemFactoryUnit2"                        X="-40"  Y="-100">
+    <Title>%UnitBodyVitruvianTitle</Title>
+    <Description>%UnitBodyVitruvianDescription</Description>
+    <Icons DefaultSize="">
+      <Icon Size="Small" Path="GUI/AtlasedBitmaps/Units/UnitMezariTitanSmall" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/Units/UnitMezariTitanLarge" />
+    </Icons>
+    <TechnologyEraReference Name="TechnologyEraDefinition1" />
+  </TechnologyGuiElement>
+
+   <TechnologyGuiElement Name="TechnologyDefinitionGolemFactoryUnit4"                        X="-40"  Y="-240">
+    <Title>%UnitBodyGolemCollectorTitle</Title>
+    <Description>%UnitBodyGolemCollectorDescription</Description>
+    <Icons DefaultSize="">
+      <Icon Size="Small" Path="GUI/AtlasedBitmaps/Units/UnitCultistsMilitiaSmall" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/Units/UnitCultistsMilitiaLarge" />
+    </Icons>
+    <TechnologyEraReference Name="TechnologyEraDefinition1" />
+  </TechnologyGuiElement>
+  
+  <TechnologyGuiElement Name="TechnologyDefinitionGolemFactoryFactories1"                        X="120"  Y="-240">
+    <Title>%ArchitectsFactories1Title</Title>
+    <Description>%ArchitectsFactories1Description</Description>
+    <Icons DefaultSize="">
+      <Icon Size="Small" Path="GUI/DynamicBitmaps/EquipmentItems/Accessories/ItemTomeStrategic1Tier1Small" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/EquipmentItems/Accessories/ItemTomeStrategic1Tier1Large" />
+    </Icons>
+    <TechnologyEraReference Name="TechnologyEraDefinition1" />
+  </TechnologyGuiElement>
+  
+ 
+  
+  <!-- Architects Faction Era 2 -->
+<TechnologyGuiElement Name="TechnologyDefinitionGolemFactoryUnit3"                        X="-40"  Y="-100">
+    <Title>%UnitGolemArtilleryTitle</Title>
+    <Description>%UnitGolemArtilleryDescription</Description>
+    <Icons DefaultSize="">
+      <Icon Size="Small" Path="GUI/AtlasedBitmaps/Units/UnitBrokenLordsCavalrySmall" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/Units/UnitBrokenLordsCavalryLarge" />
+    </Icons>
+    <TechnologyEraReference Name="TechnologyEraDefinition2" />
+  </TechnologyGuiElement>
+
+  <TechnologyGuiElement Name="TechnologyDefinitionGolemFactoryFactories2"                        X="120"  Y="-240">
+    <Title>%ArchitectsFactories2Title</Title>
+    <Description>%ArchitectsFactories2Description</Description>
+    <Icons DefaultSize="">
+      <Icon Size="Small" Path="GUI/DynamicBitmaps/EquipmentItems/Accessories/ItemTomeStrategic1Tier2Small" />
+      <Icon Size="Large" Path="GUI/DynamicBitmaps/EquipmentItems/Accessories/ItemTomeStrategic1Tier2Large" />
+    </Icons>
+    <TechnologyEraReference Name="TechnologyEraDefinition2" />
+  </TechnologyGuiElement>
+  
+  </Datatable>

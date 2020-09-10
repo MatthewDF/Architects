@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  
+  <!--Summoners Evoker -->
+  <RemappingDefinition Path="Prefabs/Armies/UnitBodyGolemSoldiers" 
+                       RetargetPath="Prefabs/Armies/UnitBodyBrokenLordsMilitia">
+    <MaterialData Name="Ch_BLords_Militia">
+      <MaterialProperty Name="_MainTex">Textures/Ch_BLord_Militia_DIFF.png</MaterialProperty>
+    </MaterialData>
+  </RemappingDefinition>
+  
+	<RemappingDefinition Path="Prefabs/Armies/UnitBodyGolemCollector" 
+                       RetargetPath="Prefabs/Armies/UnitBodyCultistsMilitia">
+    <MaterialData Name="Ch_Cultists_Militia">
+      <MaterialProperty Name="_MainTex">Textures/Ch_Cultists_Militia.png</MaterialProperty>
+    </MaterialData>
+  </RemappingDefinition>
+     
+   <RemappingDefinition Path="Prefabs/Armies/UnitBodyVitruvian" 
+                       RetargetPath="Prefabs/Armies/UnitBodyMezariTitan">
+    <MaterialData Name="Ch_Tutorial_Unit3">
+      <MaterialProperty Name="_MainTex">Textures/Ch_Tutorial_Unit3_DIFF.png</MaterialProperty>
+    </MaterialData>
+  </RemappingDefinition> 
+
+	<RemappingDefinition Path="Prefabs/Armies/UnitBodyGolemArtillery" 
+                       RetargetPath="Prefabs/Armies/UnitBodyBrokenLordsCavalry">
+    <MaterialData Name="CH_Blord_Cavalry">
+      <MaterialProperty Name="_MainTex">Textures/CH_Blord_Cavalry_DIFF.png</MaterialProperty>
+    </MaterialData>
+  </RemappingDefinition>  
+  
+	<RemappingDefinition Path="Prefabs/Armies/UnitBodyGolemFactoryMilitia" 
+                       RetargetPath="Prefabs/Armies/UnitBodyBrokenLordsMilitia">
+    <MaterialData Name="Ch_BLords_Militia">
+      <MaterialProperty Name="_MainTex">Textures/Ch_BLord_Militia_DIFF.png</MaterialProperty>
+    </MaterialData>
+  </RemappingDefinition>   
+
+	<RemappingDefinition Path="Prefabs/Armies/UnitBodyEngineers" 
+                       RetargetPath="Prefabs/Armies/UnitBodyMezariDawnOfficer">
+  </RemappingDefinition>   
+  
+  </Datatable>

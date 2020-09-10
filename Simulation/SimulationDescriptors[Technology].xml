@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <!--Golem Factory Units -->
+  <SimulationDescriptor Name="TechnologyGolemFactoryUnit1"						Type="Technology" />
+  <SimulationDescriptor Name="TechnologyGolemFactoryUnit2"						Type="Technology" />
+  <SimulationDescriptor Name="TechnologyGolemFactoryUnit3"						Type="Technology" />
+  <SimulationDescriptor Name="TechnologyGolemFactoryUnit4"						Type="Technology" />
+  
+  <!--Golem Factory Districts -->
+  
+  <SimulationDescriptor Name="TechnologyGolemFactoryEra1Factories"						Type="Technology" />
+  <SimulationDescriptor Name="TechnologyGolemFactoryEra2Factories"						Type="Technology" />
+  
+  </Datatable>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalizationPair Name="%UnitBodyGolemSettler">Settlers</LocalizationPair>
+  <LocalizationPair Name="%UnitBodyGolemSettlerDescription">Factory golems that specialize in establishing new factory cities.</LocalizationPair>
+
+  <LocalizationPair Name="%UnitBodyGolemCollectorTitle">Collectors</LocalizationPair>
+  <LocalizationPair Name="%UnitBodyGolemCollectorDescription">Factory golems that specialize in mining resources and delivering them to the Architect's factory city.</LocalizationPair>
+  
+  <LocalizationPair Name="%UnitBodyEngineers">Engineers</LocalizationPair>
+  <LocalizationPair Name="%UnitBodyEngineersDescription">Factory engineers that specialize in repairs and overclocking golems.</LocalizationPair>
+
+  <LocalizationPair Name="%UnitBodyGolemSoldiersTitle">Golem Soldiers</LocalizationPair>
+  <LocalizationPair Name="%UnitBodyGolemSoldiersDescription">The Factory engineers' 'instant soldier' solution; a low production cost, low quality, mass produced army.</LocalizationPair>
+  
+  <LocalizationPair Name="%UnitBodyVitruvianTitle">Vitruvian</LocalizationPair>
+  <LocalizationPair Name="%UnitBodyVitruvianDescription">The culmination of decades of research from the factory's lead developers resulted in the Vitruvian, the ultimate in front-line golem combat units.</LocalizationPair>
+  
+  <LocalizationPair Name="%UnitGolemArtilleryTitle">Artillery Golem</LocalizationPair>
+  <LocalizationPair Name="%UnitGolemArtilleryDescription">The Architects realized that the factory's defences required solutions to problems before they arrived at the city's walls. </LocalizationPair>
+  
+  <LocalizationPair Name="%AffinityMappingGolemFactoryTitle">Architects Appearance</LocalizationPair>
+  <LocalizationPair Name="%AffinityMappingGolemFactoryDescription">Your custom faction will display the 2D and 3D visuals of the Architects.</LocalizationPair>
+
+  <LocalizationPair Name="%UnitGolemMilitiaTitle">Militia Golem</LocalizationPair>
+  <LocalizationPair Name="%UnitGolemMilitiaDescription">Standard security golems that can be used as Factory defense forces should the Factory ever come under attack.</LocalizationPair>  
+  
+  <LocalizationPair Name="%FactionGolemFactoryTitle">Architects</LocalizationPair>
+  <LocalizationPair Name="%FactionGolemFactoryDescription">The Architects: Peerless crafters, designers, and machinators. Their work is the pinnacle of automation, and now their great Factory City rises up from the ground, its production lines slowly waking; ready to show Auriga their genius and all its splendor. </LocalizationPair>
+  <LocalizationPair Name="%AffinityGolemFactoryVictoryType">Main Victory Type: Production</LocalizationPair>
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyCaption">Crafts</LocalizationPair>
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyTitle1">Battalion of</LocalizationPair>
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyTitle2">Squad of</LocalizationPair>
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyTitle3">Production of</LocalizationPair>
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyTitle4">Unit of</LocalizationPair>
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyTitle5">Troop of</LocalizationPair>
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyTitle6">Collection of</LocalizationPair>
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyTitle7">Domination of</LocalizationPair>
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyTitle8">Marching of</LocalizationPair>
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyTitle9">Assembly of</LocalizationPair>
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyTitle10">Summoning of</LocalizationPair>
+  <LocalizationPair Name="%AILeaderAffinityGolemFactory0">Chandwara</LocalizationPair>
+  <LocalizationPair Name="%AILeaderAffinityGolemFactory1">Reyap</LocalizationPair>
+  <LocalizationPair Name="%AILeaderAffinityGolemFactory2">Angratad</LocalizationPair>
+  <LocalizationPair Name="%AILeaderAffinityGolemFactory3">Pukopi</LocalizationPair>
+  <LocalizationPair Name="%AILeaderAffinityGolemFactory4">Samutanda</LocalizationPair>
+  <LocalizationPair Name="%AILeaderAffinityGolemFactory5">Theramanya</LocalizationPair>
+  <LocalizationPair Name="%AILeaderAffinityGolemFactory6">Shaosisli</LocalizationPair>
+  <LocalizationPair Name="%AILeaderAffinityGolemFactory7">Uratewatan</LocalizationPair>
+  
+<!-- Architects quest dialog -->
+  <LocalizationPair Name="%ArchitectsFactoryTutorial1Title">Factory Logistics</LocalizationPair>  
+  <LocalizationPair Name="%ArchitectsFactoryTutorial1Description">The Factory's engineers are now one step closer to developing a new golem automaton model. We'll need to begin construction of a new wing for the Factory in order to support the unit's fabrication, but once we do we can begin full production.</LocalizationPair>  
+  <LocalizationPair Name="%ArchitectsFactoryTutorial1Objective">Constructing new golem units is only possible with the proper Factory structures. Research 'Factory Logistics I' and a new unit type, then build the special district to allow unit manufacturing.</LocalizationPair>  
+  <LocalizationPair Name="%ArchitectsFactoryTutorial1Outcome">Construction on the new workshop has completed and the Factory is ready to begin production on the new golem model at any time.</LocalizationPair>  
+  <LocalizationPair Name="%MainQuestArchitects-Chapter1-Step1">Research 'Factory Logistics I' and a golem model for construction. Expand the Factory with the special District, then build the new unit.</LocalizationPair>  
+  
+  
+<!-- Architects quest dialog -->
+  <LocalizationPair Name="%FactionAffinityGolemFactoryArmyColossusTitle">Ultimate</LocalizationPair>  
+  
+  <LocalizationPair Name="%HeroNameGolemFactoryHero1Version1Title">Craft Alpha</LocalizationPair>
+  <LocalizationPair Name="%UnitProfileGolemFactoryHero1Title">Craft Alpha</LocalizationPair>
+  <LocalizationPair Name="%UnitProfileGolemFactoryHero1Description">A golem developed by one of the Factory's lost elite researchers. Designated 'Craft Alpha', this unit's capabilities are unknown. </LocalizationPair>
+
+<!-- Factory Technology -->  
+  <LocalizationPair Name="%ArchitectsFactories1Title">Factory Logistics I</LocalizationPair>
+  <LocalizationPair Name="%ArchitectsFactories1Description">To be able to manufacture more sophisticated golems Architect engineers have created a complex system for resource creation, storage, and allocation. As a happy side effect more specific modifications to existing models of golem will be possible as well.</LocalizationPair>
+
+  <LocalizationPair Name="%ArchitectsFactories2Title">Factory Logistics II</LocalizationPair>
+  <LocalizationPair Name="%ArchitectsFactories2Description">By advancing concepts in storage, inner-Factory resource transportation, and developing new technology for golem modifications, more complex golem models become possible.</LocalizationPair>
+
+<!-- Districts -->  
+  <LocalizationPair Name="%DistrictImprovementArchitectsTitle">Factory Extension</LocalizationPair>
+  <LocalizationPair Name="%DistrictImprovementArchitectsVitruvianTitle">Vitruvian Workshop</LocalizationPair>
+  <LocalizationPair Name="%DistrictImprovementArchitectsSoldiersTitle">Soldier Workshop</LocalizationPair>
+  <LocalizationPair Name="%DistrictImprovementArchitectsCollectorsTitle">Collector Workshop</LocalizationPair>
+  <LocalizationPair Name="%DistrictImprovementArchitectsArtilleryTitle">Artillery Workshop</LocalizationPair>
+
+  
+  <LocalizationPair Name="%DistrictImprovementArchitectsVitruvian1Title">Vitruvian Workshop</LocalizationPair>
+  <LocalizationPair Name="%DistrictImprovementArchitectsVitruvian1Description">In order to begin construction of the new Vitruvian golem model we must outfit a section of the Factory City with special tools, resource processing, and part storage.</LocalizationPair>
+
+  <LocalizationPair Name="%DistrictImprovementArchitectsSoldiers1Title">Soldier Workshop</LocalizationPair>
+  <LocalizationPair Name="%DistrictImprovementArchitectsSoldiers1Description">In order to begin construction of the new mass-produced models of golem soldiers we must outfit a section of the Factory City with special tools, resource processing, and part storage.</LocalizationPair>
+
+  <LocalizationPair Name="%DistrictImprovementArchitectsCollectors1Title">Collector Workshop</LocalizationPair>
+  <LocalizationPair Name="%DistrictImprovementArchitectsCollectors1Description">In order to begin construction of the new Collector golem model we must outfit a section of the Factory City with special tools, resource processing, and part storage.</LocalizationPair>
+
+  <LocalizationPair Name="%DistrictImprovementArchitectsArtillery1Title">Artillery Workshop</LocalizationPair>
+  <LocalizationPair Name="%DistrictImprovementArchitectsArtillery1Description">In order to begin construction of the new Artillery golem model we must outfit a section of the Factory City with special tools, resource processing, and part storage.</LocalizationPair>
+
+  
+  <LocalizationPair Name="%DistrictImprovementArchitects1Title">Factory Extension</LocalizationPair>
+  <LocalizationPair Name="%DistrictImprovementArchitects1Description">Begin production on a new wing of the Factory City, adding new factories, warehouses, product lines, and more.</LocalizationPair>
+ 
+  <LocalizationPair Name="%ArchitectsFactoryRequirement">Golem units require a special one-time Factory City expansion in order to be constructed.</LocalizationPair>
+ 
+ <!-- Accessories -->
+  <LocalizationPair Name="%UnitAbilityOverclockTitle">Overclock</LocalizationPair>
+  <LocalizationPair Name="%UnitAbilityOverclockDescription">#FFB43F#BATTLE EFFECTS#REVERT#
+   -5% LIFE \7770\ PER TURN
+   +20% DAMAGE \7776\ INCREASE
+   +20% ATTACK \7772 INCREASE
+   +1 VISION RANGE \7775\ INCREASE</LocalizationPair>
+ 
+  </Datatable>

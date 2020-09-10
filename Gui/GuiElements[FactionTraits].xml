@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+  <!-- ########################################## -->
+  <!-- ######         Golem Factory         ###### -->
+  <!-- ########################################## -->
+
+  <!-- Golem Factory -->
+  
+  <GuiElement Name="FactionTraitArchitects1">
+    <Title>Golem Workforce</Title>
+    <Description>The streets of the Architects' Factory City are lined with a golem workforce and has no need for agriculture.</Description>
+  </GuiElement>
+ 
+ <GuiElement Name="FactionTraitArchitectsUnit1">
+    <Title>%UnitBodyGolemSoldiersTitle</Title>
+    <Description>%UnitBodyGolemSoldiersDescription</Description>
+  </GuiElement>
+
+  <GuiElement Name="FactionTraitArchitectsUnit2">
+    <Title>%UnitBodyGolemCollectorTitle</Title>
+    <Description>%UnitBodyGolemCollectorDescription</Description>
+  </GuiElement>
+ 
+  
+  <GuiElement Name="FactionTraitArchitectsUnit3">
+    <Title>%UnitBodyGolemSettler</Title>
+    <Description>%UnitBodyGolemSettlerDescription</Description>
+  </GuiElement>
+ 
+  
+  <GuiElement Name="FactionTraitArchitectsUnit4">
+    <Title>%UnitBodyEngineers</Title>
+    <Description>%UnitBodyEngineersDescription</Description>
+  </GuiElement>
+  
+    <GuiElement Name="FactionTraitArchitectsUnit5">
+    <Title>%UnitBodyVitruvianTitle</Title>
+    <Description>%UnUnitBodyVitruvianDescription</Description>
+  </GuiElement>
+  
+  <GuiElement Name="FactionTraitArchitectsUnit6">
+    <Title>%UnitGolemArtilleryTitle</Title>
+    <Description>%UnitGolemArtilleryDescription</Description>
+  </GuiElement>
+</Datatable>

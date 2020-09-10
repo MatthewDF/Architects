@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--============ TITLE: Architects Tutorial Quest ============-->
+  <QuestDefinition Name="MainQuestArchitects-Chapter1" Category="MainQuest" SubCategory="Main" Cooldown="0" SkipLockedQuestTarget="false" NumberOfConcurrentInstances="0" NumberOfOccurencesPerEmpire="1" NumberOfOccurencesPerGame="0">
+
+    <!--============ TAGS ============-->
+    <Tags>MainQuest,Chapter1,BeginTurn</Tags>
+
+    <!--============ PREREQUISITES ============-->
+    <Prerequisites Target="$(Empire)">
+      <PathPrerequisite Flags="Prerequisite">../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>
+      <InterpreterPrerequisite Flags="Prerequisite">$Count(EmpireTypeMajor/ClassCity) ge 1</InterpreterPrerequisite>
+      <InterpreterPrerequisite Flags="TechnologyDependency">$Path(EmpireTypeMajor/ClassResearch,TechnologyGolemFactoryUnit1) or $Path(EmpireTypeMajor/ClassResearch,TechnologyGolemFactoryUnit2) or $Path(EmpireTypeMajor/ClassResearch,TechnologyGolemFactoryUnit4) or $Path(EmpireTypeMajor/ClassResearch,TechnologyGolemFactoryEra1Factories)</InterpreterPrerequisite>
+    </Prerequisites>
+	
+    <!--============ VARIABLES ============-->
+
+    <!--============ SEQUENCE ============-->
+    <Controller_Sequence>
+	
+      <!--Step 1-->
+    <Action_UpdateStep StepName="MainQuestArchitects-Chapter1-Step1" State="InProgress" />
+	<Decorator_BeginTurn Initiator="Empire">
+	  <ConditionCheck_Prerequisite>
+		<Prerequisites Target="$Empire">
+		<InterpreterPrerequisite Flags="Prerequisite">($Count(ClassEmpire/Garrison/UnitTypeVitruvian) ge 1) or ($Count(ClassEmpire/Garrison/UnitTypeGolemSoldiers) ge 1) or ($Count(ClassEmpire/Garrison/UnitTypeArtilleryGolem) ge 1) or ($Count(ClassEmpire/Garrison/UnitTypeCollector) ge 1)</InterpreterPrerequisite>  
+		</Prerequisites>
+      </ConditionCheck_Prerequisite>
+	</Decorator_BeginTurn>
+	 <Action_UpdateStep StepName="MainQuestArchitects-Chapter1-Step1" State="Completed"/>
+      <Action_UpdateQuest State="Completed" />
+	  
+    </Controller_Sequence>
+	
+    <!--============ REWARDS ============-->
+    <Steps>
+      <Step Name="MainQuestArchitects-Chapter1-Step1">
+        <Reward Droplist="DroplistArchitects1ProductionReward" Picks="1"/>
+      </Step>
+    </Steps>
+
+    <!--============ TRIGGER ============-->
+	
+  </QuestDefinition>
+
+
+
+  
+</Datatable>

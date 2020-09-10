@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ###################################### -->
+  <!-- ## Architects District Improvements ## -->
+  <!-- ###################################### -->
+
+  
+
+  <!-- Borough streets -->
+  <DistrictImprovementDefinition        Name="DistrictImprovementArchitects1"                         SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough" >
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 150 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementArchitects" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1Availability" />
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Discard">$Property(FreeBoroughStock) eq 0</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,!FactionTraitNecrophages12</PathPrerequisite>
+    <PathPrerequisite 						  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>	
+    <TechnologyPrerequisite  Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">!TechnologyOrbUnlock18WinterShifters</TechnologyPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(PopulationBonus) ge (($Property(NumberOfBoroughsInCity) + 1) * 2)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+
+  <!-- Necrophage Borough streets (cheaper) -->
+  <DistrictImprovementDefinition        Name="DistrictImprovementArchitects1Necrophage"               SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough">
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 100 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementArchitects" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1NecrophageAvailability" />
+    <PathPrerequisite 						  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>	
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,FactionTraitNecrophages12</PathPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(PopulationBonus) ge ($Property(NumberOfBoroughsInCity) + 1)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+
+  <FreeDistrictImprovementDefinition    Name="FreeDistrictImprovement1"                     SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough">
+    <CustomCost ResourceName="FreeBorough" InstantOnCompletion="true">1</CustomCost>
+    <CustomCost ResourceName="QueuedFreeBorough" Instant="true">1</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementArchitects" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,AffinityRovingClans</PathPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Discard,AIEconomicRatio">$Property(QueuedFreeBoroughStock) gt 0</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </FreeDistrictImprovementDefinition>
+  
+  <!--<FreeDistrictImprovementDefinition    Name="FreeDistrictImprovementArchitects1"                     SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough">
+    <CustomCost ResourceName="FreeBorough" InstantOnCompletion="true">1</CustomCost>
+    <CustomCost ResourceName="QueuedFreeBorough" Instant="true">1</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementExtension" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <PathPrerequisite Flags="Prerequisite,Validity">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>		
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,AffinityRovingClans</PathPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Discard,AIEconomicRatio">$Property(QueuedFreeBoroughStock) gt 0</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </FreeDistrictImprovementDefinition>-->
+  
+  
+  <!-- Unit Factories -->
+	<!-- District improvement Unit Factory Golem Soldier TechnologyGolemFactoryUnit1 --> 
+  
+	<!-- District Improvement Unit Factory Vitruvian -->
+    <DistrictImprovementDefinition        Name="DistrictImprovementArchitectsVitruvian1"                         SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough" >
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 150 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementArchitectsVitruvian" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1Availability" />
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Discard,Technology">!TechnologyGolemFactoryEra1Factories</TechnologyPrerequisite>	
+    <InterpreterPrerequisite Inverted="true" Flags="Prerequisite,Discard">$Count(ClassCity/DistrictImprovementArchitectsVitruvian) eq 1</InterpreterPrerequisite>		
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Discard">$Property(FreeBoroughStock) eq 0</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,!FactionTraitNecrophages12</PathPrerequisite>
+    <PathPrerequisite 						  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>	
+    <TechnologyPrerequisite  Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">!TechnologyOrbUnlock18WinterShifters</TechnologyPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(PopulationBonus) ge (($Property(NumberOfBoroughsInCity) + 1) * 2)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+
+    <DistrictImprovementDefinition        Name="DistrictImprovementArchitectsVitruvian1Necrophage"               SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough">
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 100 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementArchitectsVitruvian" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1NecrophageAvailability" />
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Discard,Technology">!TechnologyGolemFactoryEra1Factories</TechnologyPrerequisite>	
+    <InterpreterPrerequisite Inverted="true" Flags="Prerequisite,Discard">$Count(ClassCity/DistrictImprovementArchitectsVitruvian) eq 1</InterpreterPrerequisite>		    
+	<PathPrerequisite 						  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>	
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,FactionTraitNecrophages12</PathPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(PopulationBonus) ge ($Property(NumberOfBoroughsInCity) + 1)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+  
+  	<!-- District Improvement Unit Factory Golem Soldiers -->
+    <DistrictImprovementDefinition        Name="DistrictImprovementArchitectsSoldiers1"                         SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough" >
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 150 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementArchitectsSoldiers" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1Availability" />
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Discard,Technology">!TechnologyGolemFactoryEra1Factories</TechnologyPrerequisite>	
+    <InterpreterPrerequisite Inverted="true" Flags="Prerequisite,Discard">$Count(ClassCity/DistrictImprovementArchitectsSoldiers) eq 1</InterpreterPrerequisite>		
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Discard">$Property(FreeBoroughStock) eq 0</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,!FactionTraitNecrophages12</PathPrerequisite>
+    <PathPrerequisite 						  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>	
+    <TechnologyPrerequisite  Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">!TechnologyOrbUnlock18WinterShifters</TechnologyPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(PopulationBonus) ge (($Property(NumberOfBoroughsInCity) + 1) * 2)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+
+    <DistrictImprovementDefinition        Name="DistrictImprovementArchitectsSoldiers1Necrophage"               SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough">
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 100 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementArchitectsSoldiers" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1NecrophageAvailability" />
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Discard,Technology">!TechnologyGolemFactoryEra1Factories</TechnologyPrerequisite>	
+    <InterpreterPrerequisite Inverted="true" Flags="Prerequisite,Discard">$Count(ClassCity/DistrictImprovementArchitectsSoldiers) eq 1</InterpreterPrerequisite>		    
+	<PathPrerequisite 						  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>	
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,FactionTraitNecrophages12</PathPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(PopulationBonus) ge ($Property(NumberOfBoroughsInCity) + 1)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+	
+	
+	<!-- District Improvement Unit Factory Artillery -->
+    <DistrictImprovementDefinition        Name="DistrictImprovementArchitectsArtillery1"                         SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough" >
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 150 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementArchitectsArtillery" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1Availability" />
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Discard,Technology">!TechnologyGolemFactoryEra2Factories</TechnologyPrerequisite>	
+    <InterpreterPrerequisite Inverted="true" Flags="Prerequisite,Discard">$Count(ClassCity/DistrictImprovementArchitectsArtillery) eq 1</InterpreterPrerequisite>		
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Discard">$Property(FreeBoroughStock) eq 0</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,!FactionTraitNecrophages12</PathPrerequisite>
+    <PathPrerequisite 						  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>	
+    <TechnologyPrerequisite  Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">!TechnologyOrbUnlock18WinterShifters</TechnologyPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(PopulationBonus) ge (($Property(NumberOfBoroughsInCity) + 1) * 2)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+
+    <DistrictImprovementDefinition        Name="DistrictImprovementArchitectsArtillery1Necrophage"               SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough">
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 100 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementArchitectsArtillery" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1NecrophageAvailability" />
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Discard,Technology">!TechnologyGolemFactoryEra2Factories</TechnologyPrerequisite>	
+    <InterpreterPrerequisite Inverted="true" Flags="Prerequisite,Discard">$Count(ClassCity/DistrictImprovementArchitectsArtillery) eq 1</InterpreterPrerequisite>		    
+	<PathPrerequisite 						  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>	
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,FactionTraitNecrophages12</PathPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(PopulationBonus) ge ($Property(NumberOfBoroughsInCity) + 1)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+
+
+  
+	<!-- District Improement Unit Factory Collectors -->
+    <DistrictImprovementDefinition        Name="DistrictImprovementArchitectsCollectors1"                         SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough" >
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 150 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementArchitectsCollectors" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1Availability" />
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Discard,Technology">!TechnologyGolemFactoryEra1Factories</TechnologyPrerequisite>	
+    <InterpreterPrerequisite Inverted="true" Flags="Prerequisite,Discard">$Count(ClassCity/DistrictImprovementArchitectsCollectors) eq 1</InterpreterPrerequisite>		
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Discard">$Property(FreeBoroughStock) eq 0</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,!FactionTraitNecrophages12</PathPrerequisite>
+    <PathPrerequisite 						  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>	
+    <TechnologyPrerequisite  Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">!TechnologyOrbUnlock18WinterShifters</TechnologyPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(PopulationBonus) ge (($Property(NumberOfBoroughsInCity) + 1) * 2)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+
+    <DistrictImprovementDefinition        Name="DistrictImprovementArchitectsCollectors1Necrophage"               SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough">
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 100 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementArchitectsCollectors" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1NecrophageAvailability" />
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Discard,Technology">!TechnologyGolemFactoryEra1Factories</TechnologyPrerequisite>	
+    <InterpreterPrerequisite Inverted="true" Flags="Prerequisite,Discard">$Count(ClassCity/DistrictImprovementArchitectsCollectors) eq 1</InterpreterPrerequisite>		    
+	<PathPrerequisite 						  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>	
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,FactionTraitNecrophages12</PathPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(PopulationBonus) ge ($Property(NumberOfBoroughsInCity) + 1)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+  
+  
+  <!-- Disables normal Districts from being built by Architects -->
+  
+  <DistrictImprovementDefinition        Name="DistrictImprovement1"                         SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough" >
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 150 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementExtension" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1Availability" />
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Discard">$Property(FreeBoroughStock) eq 0</InterpreterPrerequisite>
+    <PathPrerequisite 		 Inverted="true"  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>		
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,!FactionTraitNecrophages12</PathPrerequisite>
+    <TechnologyPrerequisite  Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">!TechnologyOrbUnlock18WinterShifters</TechnologyPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(Population) ge (($Property(NumberOfBoroughsInCity) + 1) * 2)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+
+  <DistrictImprovementDefinition        Name="DistrictImprovement1Necrophage"               SubCategory="SubCategoryDistrict" ResourceOnMigration="FreeBorough">
+    <CostReductionReference Name="DistrictImprovementWithAIBonus"/>
+    <CustomCost ResourceName="Production">($Property(ClassCity:NumberOfBoroughsInCity) + 1) * 100 * $Property(../ClassEmpire:BoroughCostFactor)</CustomCost>
+    <SimulationDescriptorReference Name="DistrictImprovementExtension" />
+    <SimulationDescriptorReference Name="DistrictImprovementExtractingCapacity" />
+    <SimulationDescriptorReference Name="DistrictImprovement1NecrophageAvailability" />
+    <PathPrerequisite 		 Inverted="true"  Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>		
+    <PathPrerequisite        Inverted="false" Flags="Prerequisite,Discard,AIEconomicRatio">.../ClassEmpire,FactionTraitNecrophages12</PathPrerequisite>
+    <InterpreterPrerequisite Inverted="false" Flags="Prerequisite,Disable,AIEconomicRatio">$Property(Population) ge ($Property(NumberOfBoroughsInCity) + 1)</InterpreterPrerequisite>
+    <PathPrerequisite        Inverted="true"  Flags="Prerequisite,Siege,AIEconomicRatio">ClassCity,CityStatusSiege</PathPrerequisite>
+  </DistrictImprovementDefinition>
+  
+  
+  
+</Datatable>

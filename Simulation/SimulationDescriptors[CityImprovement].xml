@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- ################################################ -->
+  <!-- ######  Architect's Population Production ###### -->
+  <!-- ################################################ -->
+
+  <!-- +1 worker golem on city -->
+  <SimulationDescriptor Name="CityImprovementArchitectsPopulation"       IsUnique="false"       Type="CityImprovement">
+    <SimulationModifierDescriptors>
+	<SimulationModifierDescriptor TargetProperty="PopulationBonus" Operation="Addition" Value="1" Path="./ClassCity"/>
+      <SimulationModifierDescriptor TargetProperty="CityMoneyUpkeep"            Operation="Addition" Value="1.5"/>	  
+    </SimulationModifierDescriptors>
+  </SimulationDescriptor>
+
+  
+</Datatable>

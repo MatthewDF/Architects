@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- +1 worker golem on villages -->
+  <GuiElement Name="CityImprovementArchitectsPopulation" >
+    <Title>Golem Worker</Title>
+    <Description>Change factory production priorities and begin working on a new fleet of worker golems.</Description>
+    <Icons>
+      <Icon Size="Small" Path="Gui/AtlasedBitmaps/Improvements/City/CityImprovementIndustry3Small" />
+      <Icon Size="Large" Path="Gui/DynamicBitmaps/Improvements/City/CityImprovementIndustry3Large" />
+    </Icons>
+  </GuiElement>
+
+
+</Datatable>
