@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <RuntimeModule Name="GolemCraftersExp" Type="Extension">
+  <RuntimeModule Name="GolemCrafters" Type="Extension">
     
     <Tags />
     <Author>Mazu</Author>
     <Homepage></Homepage>
 													  
-    <Title>Architects (Experimental)</Title>
+    <Title>Architects</Title>
 	<PreviewImageFile>endlesshalloween.jpg</PreviewImageFile>
     <Description>
 
 
-	Adds the golem crafting 'Architects' faction. V.059981, experimental.
+	Adds the golem crafting 'Architects' faction. V.060
 
 	
 
@@ -38,10 +38,10 @@ Activate the Architect's factory cities and begin production:
 New in V.06:
 Large overhaul to Architects faction:
 -Each Golem Model now requires a specific District to be built in the city before their construction is possible.
--New Districts have been added for each Golem Model. Improving these Districts unlocks modifications to be used on all golems.
--A new unit type has been added, the mass producable 'Golem Soldier'.
+-New Districts have been added for each Golem Model. Researching these Districts unlocks modifications to be used on all golems.
+-A new unit type has been added; the mass producable 'Golem Soldier'.
 -Unique faction skins have been hand-crafted for each Architect faction unit, marking them as their own unique Faction on the battlefield.
-Numerous fixes and balancing are included in the update as well.
+-Numerous bug fixes and faction balance adjustments
 
 
 ---

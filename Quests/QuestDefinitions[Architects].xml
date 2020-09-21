@@ -24,7 +24,7 @@
 	<Decorator_BeginTurn Initiator="Empire">
 	  <ConditionCheck_Prerequisite>
 		<Prerequisites Target="$Empire">
-		<InterpreterPrerequisite Flags="Prerequisite">($Count(ClassEmpire/Garrison/UnitTypeVitruvian) ge 1) or ($Count(ClassEmpire/Garrison/UnitTypeGolemSoldiers) ge 1) or ($Count(ClassEmpire/Garrison/UnitTypeArtilleryGolem) ge 1) or ($Count(ClassEmpire/Garrison/UnitTypeCollector) ge 1)</InterpreterPrerequisite>  
+		<InterpreterPrerequisite Flags="Prerequisite">($Count(ClassEmpire/Garrison/UnitTypeVitruvian) ge 1) or ($Count(ClassEmpire/Garrison/UnitTypeGolemSoldier) ge 1) or ($Count(ClassEmpire/Garrison/UnitTypeArtilleryGolem) ge 1) or ($Count(ClassEmpire/Garrison/UnitTypeCollector) ge 1)</InterpreterPrerequisite>  
 		</Prerequisites>
       </ConditionCheck_Prerequisite>
 	</Decorator_BeginTurn>
