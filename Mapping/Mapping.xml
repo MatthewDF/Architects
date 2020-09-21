@@ -134,7 +134,23 @@
         <GameObject Name="($(PlacementCursorClass).$(ConstructibleElement))" Prefab="Prefabs/Cities/BrokenLords/$(PlacementCursorClass)_$(ConstructibleElementName)"/>
       </Fallback>
     </Node>
+	
+	<Node Condition="($(ConstructibleElementSubCategory) eq 'SubCategoryWonder')">
+      <GameObject Name="($(PlacementCursorClass).$(ConstructibleElementName))" Prefab="Prefabs/Cities/$(AffinityMapping)/$(PlacementCursorClass)_$(ConstructibleElementName)"/>
+      <Fallback>
+        <GameObject Name="($(PlacementCursorClass).$(ConstructibleElementName))" Prefab="Prefabs/Cities/BrokenLords/$(PlacementCursorClass)_$(ConstructibleElementName)"/>
+      </Fallback>
 
+      <GameObject Name="subPart_NormalDistrict" Prefab="Prefabs/Cities/$(AffinityMapping)/$(PlacementCursorClass)_$(ConstructibleElementName)"/>
+    </Node>
+
+    <Node Condition="($(ConstructibleElementSubCategory) eq 'SubCategoryAltarOfAuriga')">
+      <GameObject Name="($(PlacementCursorClass).$(ConstructibleElement))" Prefab="Prefabs/Cities/$(AffinityMapping)/$(PlacementCursorClass)_AltarOfAuriga_00"/>
+      <Fallback>
+        <GameObject Name="($(PlacementCursorClass).$(ConstructibleElement))" Prefab="Prefabs/Cities/BrokenLords/$(PlacementCursorClass)_AltarOfAuriga_00"/>
+      </Fallback>
+    </Node>				
+	
     <Node Condition="$(PlacementCursorClass) eq 'ColossusWorldPlacementCursor'">
       <GameObject Name="($(PlacementCursorClass).$(ConstructibleElement))" Prefab="Prefabs/Cities/$(AffinityMapping)/ColossusWorldPlacementCursor_$(UnitBodyDefinition)"/>
       <Fallback>
@@ -189,6 +205,24 @@
     <Fallback>
       <GameObject Name="($(PlacementCursorClass)_Ghost)" Prefab="Prefabs/Cities/BrokenLords/$(PlacementCursorClass)_Ghost_00"/>
     </Fallback>
+	
+	    <Node Condition="$(ConstructibleElementSubCategory) eq 'SubCategoryWonder'">
+      <GameObject Name="($(ConstructibleElementName)_Ghost)" Prefab="Prefabs/Cities/$(AffinityMapping)/$(PlacementCursorClass)_$(ConstructibleElementName)_Ghost_00"/>
+      <Fallback>
+        <GameObject Name="($(ConstructibleElementName)_Ghost)" Prefab="Prefabs/Cities/BrokenLords/$(PlacementCursorClass)_$(ConstructibleElementName)_Ghost_00"/>
+      </Fallback>
+
+      <GameObject Name="subPart_NormalDistrict" Prefab="Prefabs/Cities/$(AffinityMapping)/$(PlacementCursorClass)_Ghost_00"/>
+    </Node>
+
+    <Node Condition="($(ConstructibleElementSubCategory) eq 'SubCategoryAltarOfAuriga')">
+      <GameObject Name="($(ConstructibleElement)_Ghost)" Prefab="Prefabs/Cities/$(AffinityMapping)/$(PlacementCursorClass)_AltarOfAuriga_Ghost_00"/>
+      <Fallback>
+        <GameObject Name="($(ConstructibleElement)_Ghost)" Prefab="Prefabs/Cities/BrokenLords/$(PlacementCursorClass)_AltarOfAuriga_Ghost_00"/>
+      </Fallback>
+    </Node>
+
+	
   </XmlMapping>
 
   <XmlMapping Name="PointOfInterest.FX">
@@ -285,6 +319,26 @@
   <XmlMapping Name="WorldDistrict">
     <Variation Weights="1" Values="00"/>
 
+    <Node Condition="$Path(DistrictImprovementWonder)" >
+      <GameObject Name="WorldDistrict:$Descriptor(DistrictImprovement)_$Descriptor(DistrictImprovementWonder)" Prefab="Prefabs/Cities/$(AffinityName)/District_Wonder_0$Descriptor(DistrictImprovementWonder)"/>
+      <Fallback>
+        <GameObject Name="WorldDistrict:$Descriptor(DistrictImprovement)_Wonder1" Prefab="Prefabs/Cities/BrokenLords/District_Wonder_01"/>
+      </Fallback>
+    </Node>
+
+    <Node Condition="$Path(DistrictImprovementAltarOfAuriga)" >
+      <GameObject Name="WorldDistrict:$Descriptor(DistrictImprovement)_AltarOfAuriga" Prefab="Prefabs/Cities/$(AffinityName)/District_Orbs_AltarOfAuriga_01" Condition="$Property(Level) ge 1"/>
+      <Fallback>
+        <GameObject Name="WorldDistrict:$Descriptor(DistrictImprovement)_AltarOfAuriga" Prefab="Prefabs/Cities/$(AffinityName)/District_Orbs_AltarOfAuriga_00"/>
+        <Fallback>
+            <GameObject Name="WorldDistrict:$Descriptor(DistrictImprovement)_AltarOfAuriga" Prefab="Prefabs/Cities/BrokenLords/District_Orbs_AltarOfAuriga_01" Condition="$Property(Level) ge 1"/>
+            <Fallback>
+                <GameObject Name="WorldDistrict:$Descriptor(DistrictImprovement)_AltarOfAuriga" Prefab="Prefabs/Cities/BrokenLords/District_Orbs_AltarOfAuriga_00"/>
+            </Fallback>
+        </Fallback>
+      </Fallback>
+    </Node>
+	
     <Node Condition="$Descriptor(DistrictType) eq 'Extension'" >
       <Variation Weights="25;25;25;25" Values="00;01;02;03"/>
       <Node Condition="$Path(TerrainTagPointOfInterest)">
