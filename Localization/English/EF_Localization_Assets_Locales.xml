@@ -98,9 +98,6 @@
  <!-- Accessories -->
   <LocalizationPair Name="%UnitAbilityOverclockTitle">Overclock</LocalizationPair>
   <LocalizationPair Name="%UnitAbilityOverclockDescription">#FFB43F#BATTLE EFFECTS#REVERT#
-   -5% LIFE \7770\ PER TURN
-   +20% DAMAGE \7776\ INCREASE
-   +20% ATTACK \7772 INCREASE
-   +1 VISION RANGE \7775\ INCREASE</LocalizationPair>
+   -5% LIFE \7770\ PER TURN</LocalizationPair>
  
   </Datatable>

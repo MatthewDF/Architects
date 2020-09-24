@@ -6,13 +6,15 @@
   <!-- Architect Accessories -->
   
   <ItemDefinition Name="ItemArchitectsAccessory1"            SubCategory="SubCategoryRing">
-<!--    <PathPrerequisite Flags="Prerequisite,Discard,Technology">../ClassEmpire/ClassResearch,TechnologySeaDemons9</PathPrerequisite>-->
+	<PathPrerequisite Flags="Prerequisite,Discard,Technology">../ClassEmpire/ClassResearch,TechnologyGolemFactoryEra1Factories</PathPrerequisite>
     <PathPrerequisite Flags="Prerequisite,Discard" Inverted="false">../ClassUnit,!UnitFactionTypeMinorFaction</PathPrerequisite>
     <PathPrerequisite Flags="Prerequisite,Discard">.../EmpireTypeMajor,AffinityGolemFactory</PathPrerequisite>	
     <Tags>NeverObsolete</Tags>
     <ConstructibleElementReferenceToInheritFrom Name="ItemAccessoryBase"/>
     <UnitAbilityReference Name="UnitAbilityOverclock"/>
-	<UnitAbilityReference Name="UnitAbilityDiseaseImmunity"/>	
+    <UnitAbilityReference Name="UnitAbilityImprovedInitiative" Level="1"/>
+    <UnitAbilityReference Name="UnitAbilityImprovedDamage" Level="1"/>
+    <UnitAbilityReference Name="UnitAbilityImprovedAttack" Level="0"/>
     <Cost ResourceName="EmpireMoney">50</Cost>
   </ItemDefinition>
 

@@ -5,10 +5,6 @@
     <SimulationModifierDescriptors>
       <SimulationModifierDescriptor TargetProperty="UnitRegenModifier"                Operation="Multiplication"  Value="0"       Path="ClassUnit" Priority="99"/>
       <SimulationModifierDescriptor TargetProperty="UnitPoison"                       Operation="Addition"        Value="-0.05"   Path="ClassUnit" Priority="99"/>
-      <BinarySimulationModifierDescriptor TargetProperty="AttributeAttack"                      Operation="Percent"   BinaryOperation="Multiplication" Left="0.2"   Right="$(ShiftingFormIsDark)" />
-      <BinarySimulationModifierDescriptor TargetProperty="AttributeDamage"                      Operation="Percent"   BinaryOperation="Multiplication" Left="0.2"   Right="$(ShiftingFormIsDark)" />
-      <BinarySimulationModifierDescriptor TargetProperty="VisionRange"                          Operation="Addition"  BinaryOperation="Multiplication" Left="1"     Right="$(ShiftingFormIsDark)" Priority="101"/>
-
 	  </SimulationModifierDescriptors>
   </SimulationDescriptor>
 
