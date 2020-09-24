@@ -13,6 +13,7 @@
 
 	Adds the golem crafting 'Architects' faction. V.064
 
+	Major update and rework! Please read below to see the new changes.
 	
 
 Automated Factory Cities: The crowning achievement of the Architects, the 'Factory City'. Such a complex assembly of factories and structures could only ever exist in one location.
@@ -27,9 +28,10 @@ Mining Operations: Collector golems, Non-combatants deployed outside the walls o
 Begin the match with a custom hero: Craft Alpha - A unique and powerful golem created by one of the elite, long-lost researchers of the Architects.
 
 
-Activate the Architect's factory cities and begin production:
+Activate the Architect's factory city and begin production:
 
  Engineers - Human ground units that specialize in repairing and overclocking the gear and golems of the Architects.
+ Collectors - Specialized non-combat golems capable of collecting resources outside of your region.
  Vitruvian - Advanced front-line war golem. High production costs with high output. Requires repair to keep functioning.
  Golem Soldiers - Fragile, numerous, easy to produce. These units are not the pride of the Architect's Factory City, but are nonetheless important near-instant foottroops.
  Artillary Craft - Long range back-line golem artillary units.
@@ -44,9 +46,12 @@ Large overhaul to Architects faction:
 -Numerous bug fixes and faction balance adjustments
 -Fixed issues where Wonders would not display properly once built, Golem Camp couldn't be built, and in-construction Guardians wouldn't be displayed
 
+
 ---
 Known Issues:
 There is an issue with Craft Alpha's ability tree wherein you are unable to branch from certain abilities into others. This may only be related to the right tree. Requires further testing.
+In Era 2, Logistics II does not yet have its own accessory. One will be added in the future. It is still needed in order to produce your Era 2 golem unit!
+
 
 </Description>	  
     <ReleaseNotes />
