@@ -11,7 +11,7 @@
     <Description>
 
 
-	Adds the golem crafting 'Architects' faction. V.063
+	Adds the golem crafting 'Architects' faction. V.064
 
 	
 
@@ -42,7 +42,7 @@ Large overhaul to Architects faction:
 -A new unit type has been added; the mass producable 'Golem Soldier'.
 -Unique faction skins have been hand-crafted for each Architect faction unit, marking them as their own unique Faction on the battlefield.
 -Numerous bug fixes and faction balance adjustments
-
+-Fixed issues where Wonders would not display properly once built, Golem Camp couldn't be built, and in-construction Guardians wouldn't be displayed
 
 ---
 Known Issues:
